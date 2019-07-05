@@ -1,0 +1,21 @@
+name: schibsted_account_sdk
+description: Flutter plugin for Schibsted Account SDK
+version: 0.0.1
+author: Michal Kawalko <michal.kawalko1@gmail.com>
+homepage: https://github.com/schibsted/account-sdk-flutter
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    androidPackage: com.schibsted.account.flutter
+    pluginClass: SchibstedAccountPlugin
