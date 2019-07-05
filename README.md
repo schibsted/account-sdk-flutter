@@ -2,6 +2,8 @@
 
 Flutter plugin for Schibsted Account SDK
 
+> Disclaimer: This project is not maintained by Schibsted Account team. It is an independent initiative. Please report any issue or ideas directly into this repository. Pull requests are also welcome.
+
 ## Getting Started
 
 ### Example project
