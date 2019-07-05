@@ -1,10 +1,10 @@
 import Flutter
 import UIKit
 
-public class SwiftFlutterSchibstedAccountPlugin: NSObject, FlutterPlugin {
+public class SwiftSchibstedAccountPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_schibsted_account", binaryMessenger: registrar.messenger())
-    let instance = SwiftFlutterSchibstedAccountPlugin()
+    let channel = FlutterMethodChannel(name: "schibsted_account_sdk", binaryMessenger: registrar.messenger())
+    let instance = SwiftSchibstedAccountPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 
@@ -12,3 +12,5 @@ public class SwiftFlutterSchibstedAccountPlugin: NSObject, FlutterPlugin {
     result("iOS " + UIDevice.current.systemVersion)
   }
 }
+
+
