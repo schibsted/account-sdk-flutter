@@ -12,7 +12,20 @@ If you want to run the Android example project - please provide values in
 For more info visit the [SDK Setup doc](https://github.com/schibsted/account-sdk-android#sdk-setup "SDK Setup doc").
 
 ### Android
-Configure your Android project following the steps in [account-sdk-android docs](https://github.com/schibsted/account-sdk-android "account-sdk-android docs")
+1. Configure your Android project following the steps in [account-sdk-android docs](https://github.com/schibsted/account-sdk-android "account-sdk-android docs")
+
+2. Change the Application theme (Flutter creates a AndroidManifest.xml that applies a theme to the Activity, not the Application). To do that, remove the `android:theme="@style/LaunchTheme"` from the `<activity>` tag and add it to the `<application>` tag.
+Then change the parent of `@style/LaunchTheme` to `@style/Theme.AppCompat.Light.NoActionBar` or some other `AppCompat` theme.
+
+3. Add a file with to `/res/values` that has the following information:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="schacc_conf_client_name">example client</string>
+    <string name="schacc_conf_redirect_scheme">example-scheme</string>
+    <string name="schacc_conf_redirect_host">://login</string>
+</resources>
+```
 
 ### iOS
 Not supported at the moment :-(
