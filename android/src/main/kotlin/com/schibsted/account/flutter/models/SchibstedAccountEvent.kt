@@ -29,6 +29,6 @@ fun ProfileData.toUserData(): SchibstedAccountUserData {
     return SchibstedAccountUserData(this.displayName ?: "", this.photo ?: "", this.email ?: "", this.id ?: "")
 }
 
-fun ClientError.toSchibstedAccountError(): SchibstedAccountError {
+fun ClientError.toSchibstedAccountError(): SchibstedAccountError { 
     return SchibstedAccountError(this.errorType.toString().toLowerCase(), this.message)
 }

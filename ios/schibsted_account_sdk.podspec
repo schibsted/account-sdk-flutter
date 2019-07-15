@@ -15,7 +15,8 @@ Flutter plugin for Schibsted Account SDK
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
+  s.dependency 'SchibstedAccount'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 end
 
