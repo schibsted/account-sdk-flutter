@@ -11,6 +11,10 @@ If you want to run the Android example project - please provide values in
 `example/android/app/src/main/assets/schibsted_account.conf` file.
 For more info visit the [SDK Setup doc](https://github.com/schibsted/account-sdk-android#sdk-setup "SDK Setup doc").
 
+If you want to run the iOS example project - please provide values in 
+`⁨example⁩/ios⁩/Runner⁩/SchibstedAccountConfig.plist` file.
+For more info visit the [SDK Setup doc](https://github.com/schibsted/account-sdk-ios#setup "SDK Setup doc").
+
 ### Android
 1. Configure your Android project following the steps in [account-sdk-android docs](https://github.com/schibsted/account-sdk-android "account-sdk-android docs")
 
@@ -28,8 +32,24 @@ Then change the parent of `@style/LaunchTheme` to `@style/Theme.AppCompat.Light.
 ```
 
 ### iOS
-Not supported at the moment :-(
-If somebody would like to add it - don't hesitate ;-)
+1. Configure your iOS project following the steps in [account-sdk-ios docs](https://github.com/schibsted/account-sdk-ios "account-sdk-ios docs")
+2. Add to project file SchibstedAccountConfig.plist that has the following information:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>environment</key>
+	<string>preproduction</string>
+	<key>clientID</key>
+	<string>&lt;client-id&gt;</string>
+	<key>clientSecret</key>
+	<string>&lt;client-secret&gt;</string>
+	<key>appURLScheme</key>
+	<string>&lt;url-schema&gt;</string>
+</dict>
+</plist>
+```
 
 ### Flutter
 
@@ -53,5 +73,5 @@ You can listen to the exposed `SchibstedAccountPlugin.loginEvents` Stream to get
 For more reference on how to use the plugin check the `example` project in this repo.
 
 ### TODO
-- [ ] Implement iOS
+- [✖] Implement iOS
 - [ ] Write tests

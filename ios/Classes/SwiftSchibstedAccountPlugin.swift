@@ -71,13 +71,13 @@ public class SwiftSchibstedAccountPlugin: NSObject, FlutterPlugin {
         guard let clientConfiguration = clientConfiguration else { return }
         
         let config = IdentityUIConfiguration(clientConfiguration: clientConfiguration)
-        self.identityUI = IdentityUI(configuration: config)
-        self.identityUI?.delegate = self
+        identityUI = IdentityUI(configuration: config)
+        identityUI?.delegate = self
         guard let viewCtrl = UIApplication.shared.delegate?.window??.rootViewController else {
             return
         }
         
-        self.identityUI?.presentIdentityProcess(from: viewCtrl, route: IdentityUI.Route.login)
+        identityUI?.presentIdentityProcess(from: viewCtrl, route: .login)
     }
     
     private func logout() {
