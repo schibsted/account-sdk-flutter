@@ -141,13 +141,13 @@ class SchibstedAccountPlugin(private val registrar: Registrar) : MethodCallHandl
         accountSdkReceiver = AccountSdkReceiver()
         User.resumeLastSession(registrar.context(), object : ResultCallback<User> {
             override fun onSuccess(result: User) {
-                toSchibstedAccountError        user = result
+                user = result
                 onUserLoggedIn()
             }
 
             override fun onError(error: ClientError) {
                 user = null
-                sendEvent(SchibstedAccountEvent.Error(error.()))
+                sendEvent(SchibstedAccountEvent.Error(error.toSchibstedAccountError()))
             }
         })
     }
